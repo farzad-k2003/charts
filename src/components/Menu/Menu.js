@@ -4,6 +4,7 @@ import "./Menu.css";
 
 const Menu = () => {
   const [state, dispatch] = useContext(ChartsContext);
+  console.log(state);
   return (
     <div className="menu">
       <h1 onClick={() => dispatch({ type: "PIE_CHART" })}>pie chart</h1>

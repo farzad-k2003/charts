@@ -1,5 +1,23 @@
+import { v4 as uuidv4 } from "uuid";
+
 export const initialState = {
   data: [],
+};
+
+const pieChartItemGenerator = () => {
+  return {
+    name: uuidv4(),
+    type: "PIE_CHART",
+    data: [],
+  };
+};
+
+const barChartItemGenerator = () => {
+  return {
+    name: uuidv4(),
+    type: "PIE_CHART",
+    data: [],
+  };
 };
 
 const reducer = (state, action) => {
@@ -7,10 +25,10 @@ const reducer = (state, action) => {
   const data = state.data;
   switch (action.type) {
     case "PIE_CHART":
-      newData = [...data, "pie chart"];
+      newData = [...data, pieChartItemGenerator()];
       return { ...state, data: newData };
     case "BAR_CHART":
-      newData = [...data, "bar chart"];
+      newData = [...data, barChartItemGenerator()];
       return { ...state, data: newData };
   }
 };
