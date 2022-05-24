@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,IAAI,EAAE,CAAC;EACP,UAAU,EAAE,MAAM;EAClB,gBAAgB,EAAE,IAAI;CACvB",
+    "sources": [
+        "Inspect.scss"
+    ],
+    "names": [],
+    "file": "Inspect.css"
+}
