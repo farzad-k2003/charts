@@ -15,7 +15,7 @@ const pieChartItemGenerator = () => {
 const barChartItemGenerator = () => {
   return {
     name: uuidv4(),
-    type: "PIE_CHART",
+    type: "BAR_CHART",
     data: [],
   };
 };

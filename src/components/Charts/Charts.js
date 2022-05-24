@@ -1,33 +1,14 @@
 import "./Charts.css";
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  Legend,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
-
-const data = [
-  {
-    name: "farzad",
-    uv: 4000,
-    pv: 3000,
-  },
-];
+import ChartsContext from "../Main/Context/ChartsContext";
+import { ChartGenerator } from "./utils/ChartGenerator";
+import { Bar, BarChart, CartesianGrid, Tooltip, XAxis, YAxis } from "recharts";
+import { useContext } from "react";
 
 const Charts = () => {
+  const [state, dispatch] = useContext(ChartsContext);
   return (
     <div className="charts">
-      <BarChart width={430} height={150} data={data}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Bar dataKey="pv" fill="red" />
-        <Bar dataKey="uv" fill="blue" />
-      </BarChart>
+      <div className="charts-container">{ChartGenerator(state)}</div>
     </div>
   );
 };
